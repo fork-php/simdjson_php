@@ -213,7 +213,7 @@ static simdjson_php_error_code create_array(simdjson::dom::element element, zval
             }
             break;
         }
-        EMPTY_SWITCH_DEFAULT_CASE();
+        default: ZEND_UNREACHABLE(); break;;
     }
 
     return simdjson::SUCCESS;
@@ -324,7 +324,7 @@ static simdjson_php_error_code create_object(simdjson::dom::element element, zva
             }
             break;
         }
-        EMPTY_SWITCH_DEFAULT_CASE();
+        default: ZEND_UNREACHABLE(); break;;
     }
     return simdjson::SUCCESS;
 }
